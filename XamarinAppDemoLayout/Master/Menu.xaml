@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pag="clr-namespace:XamarinAppDemoLayout.Pages"
+             mc:Ignorable="d"
+             x:Class="XamarinAppDemoLayout.Master.Menu">
+    <MasterDetailPage.Master>
+        <!-- Menu -->
+        <ContentPage Title="Menu" BackgroundColor="#0D1F2D">
+            <StackLayout>
+
+                <StackLayout BackgroundColor="#FFC926" Padding="30">
+                    <Image Source="Logo2.png"  HorizontalOptions="Center" VerticalOptions="Center" />
+                </StackLayout>
+                <StackLayout Spacing="50">
+                    <Button Text="Alexandro Maceiras"   FontSize="28" TextColor="White" BackgroundColor="Transparent" Clicked="VaiParaPerfil1" />
+                    <Button Text="José da Silva"        FontSize="28" TextColor="White" BackgroundColor="Transparent" />
+                    <Button Text="Marco Oliveira"       FontSize="28" TextColor="White" BackgroundColor="Transparent" />
+                    <Button Text="Xamarin"              FontSize="28" TextColor="White" BackgroundColor="Transparent" Clicked="VaiParaXamarin" />
+                </StackLayout>
+
+            </StackLayout>
+        </ContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <!-- Páginas -->
+        <NavigationPage>
+            <x:Arguments>
+                <pag:Entrada />
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>

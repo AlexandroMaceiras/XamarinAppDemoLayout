@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="XamarinAppDemoLayout.Pages.Perfil1">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0">
+                <RelativeLayout VerticalOptions="Start" HeightRequest="300">
+                    <Image Source="fundo.png" 
+                           RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" 
+                           Aspect="AspectFill"
+                           />
+                    <Image Source="perfil.png" WidthRequest="120"
+                           x:Name="Perfil"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=.5, Constant=-60}" 
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=.2}" 
+                           />
+                    <Label Text="Alexandro Maceiras"
+                           RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=X, Factor=1 }"
+                           RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=Perfil, Property=Y, Factor=1, Constant=190 }"
+                           />
+                </RelativeLayout>
+                <Grid BackgroundColor="#0D1F2D" HeightRequest="120">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <StackLayout Spacing="0" Grid.Column="0" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="47" TextColor="White" FontSize="32"/>
+                        <Label Text="anos" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+                    </StackLayout>
+                    <StackLayout Spacing="0" Grid.Column="1" Grid.Row="0" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label Text="27/10/1972" TextColor="White" FontSize="32"/>
+                        <Label Text="nasceu" HorizontalTextAlignment="Center" TextColor="White" FontSize="16"/>
+                    </StackLayout>
+                </Grid>
+                <StackLayout Padding="30" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <Label HorizontalTextAlignment="Center" Text=" Atuar na área de Análise, Desenvolvimento e Manutenção de Sistemas em alta e baixa plataforma. Atualmente o principal alvo de atuação é tecnologia .NET com ASP.NET e C#.NET e também com novas tecnologias como o uso de Entity Framework e MVC. Atualizado para .NET CORE de 2.0 a 3.1 com VS Code e Visual Studio 2019. Outro foco é PHP e Mobile com Xamarin e Android Studio. Grande conhecimento de integração entre alta e baixa plataforma entre WEB e mainframes Cobol/DB2 e Natural/ADABAS..." />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
